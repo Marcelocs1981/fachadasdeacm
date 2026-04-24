@@ -25,6 +25,18 @@
   display: block;
 }
 
+/* ESCONDE CHECKBOX */
+#menu-toggle {
+  display: none;
+}
+
+/* BOTÃO MENU */
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+}
+
 /* MENU MOBILE */
 .nav {
   display: none;
@@ -40,6 +52,11 @@
   padding: 16px;
 
   border-top: 1px solid #222;
+}
+
+/* ATIVA MENU (SEM JS) */
+#menu-toggle:checked ~ .nav {
+  display: flex;
 }
 
 /* LINKS */
@@ -64,27 +81,15 @@
   font-weight: 500;
 }
 
-/* BOTÃO MENU */
-.menu-toggle {
-  font-size: 24px;
-  cursor: pointer;
-  color: #fff;
-}
-
-/* MENU ATIVO */
-.nav.active {
-  display: flex;
-}
-
 /* ===== DESKTOP ===== */
 @media (min-width: 768px) {
 
-  .menu-toggle {
+  .menu-icon {
     display: none;
   }
 
   .nav {
-    display: flex;
+    display: flex !important;
     position: static;
     flex-direction: row;
     align-items: center;
